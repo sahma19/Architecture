@@ -1,8 +1,10 @@
-namespace Architecture.Database;
+using System.Threading.Tasks;
 
-public interface IAuthRepository : IRepository<Auth>
+namespace Architecture.Database.Auth;
+
+public interface IAuthRepository : IRepository<Domain.Auth>
 {
     Task DeleteByUserIdAsync(long userId);
 
-    Task<Auth> GetByLoginAsync(string login);
+    Task<Domain.Auth> GetByLoginAsync(string login);
 }

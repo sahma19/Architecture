@@ -1,4 +1,12 @@
-namespace Architecture.Web;
+using System.Collections.Generic;
+using Architecture.Application.Example.Add;
+using Architecture.Application.Example.Delete;
+using Architecture.Application.Example.Get;
+using Architecture.Application.Example.Grid;
+using Architecture.Application.Example.List;
+using Architecture.Application.Example.Update;
+
+namespace Architecture.Web.Controllers;
 
 [ApiController]
 [Route("api/examples")]

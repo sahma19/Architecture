@@ -1,4 +1,9 @@
-namespace Architecture.Web;
+using System;
+using System.Collections.Generic;
+using Architecture.Application.File.Add;
+using Architecture.Application.File.Get;
+
+namespace Architecture.Web.Controllers;
 
 [ApiController]
 [Route("api/files")]

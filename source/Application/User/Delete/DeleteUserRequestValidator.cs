@@ -1,4 +1,4 @@
-namespace Architecture.Application;
+namespace Architecture.Application.User.Delete;
 
 public sealed class DeleteUserRequestValidator : AbstractValidator<DeleteUserRequest>
 {

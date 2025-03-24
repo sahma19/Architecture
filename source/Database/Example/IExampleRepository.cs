@@ -1,6 +1,9 @@
-namespace Architecture.Database;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-public interface IExampleRepository : IRepository<Example>
+namespace Architecture.Database.Example;
+
+public interface IExampleRepository : IRepository<Domain.Example>
 {
     Task<ExampleModel> GetModelAsync(long id);
 

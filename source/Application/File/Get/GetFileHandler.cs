@@ -1,4 +1,6 @@
-namespace Architecture.Application;
+using System.Threading.Tasks;
+
+namespace Architecture.Application.File.Get;
 
 public sealed record GetFileHandler : IHandler<GetFileRequest, BinaryFile>
 {

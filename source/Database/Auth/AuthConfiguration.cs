@@ -1,10 +1,10 @@
-namespace Architecture.Database;
+namespace Architecture.Database.Auth;
 
-public sealed class AuthConfiguration : IEntityTypeConfiguration<Auth>
+public sealed class AuthConfiguration : IEntityTypeConfiguration<Domain.Auth>
 {
-    public void Configure(EntityTypeBuilder<Auth> builder)
+    public void Configure(EntityTypeBuilder<Domain.Auth> builder)
     {
-        builder.ToTable(nameof(Auth), nameof(Auth));
+        builder.ToTable(nameof(Domain.Auth), nameof(Domain.Auth));
 
         builder.HasKey(entity => entity.Id);
 
@@ -18,7 +18,7 @@ public sealed class AuthConfiguration : IEntityTypeConfiguration<Auth>
 
         builder.Property(entity => entity.Roles).IsRequired();
 
-        builder.HasOne(entity => entity.User).WithOne().HasForeignKey<Auth>("UserId").IsRequired();
+        builder.HasOne(entity => entity.User).WithOne().HasForeignKey<Domain.Auth>("UserId").IsRequired();
 
         builder.HasIndex(entity => entity.Login).IsUnique();
 

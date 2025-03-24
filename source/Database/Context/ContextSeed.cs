@@ -1,4 +1,6 @@
-namespace Architecture.Database;
+using System;
+
+namespace Architecture.Database.Context;
 
 public static class ContextSeed
 {
@@ -6,7 +8,7 @@ public static class ContextSeed
 
     private static void SeedUsers(this ModelBuilder builder)
     {
-        builder.Entity<User>(entity => entity.HasData(new
+        builder.Entity<Domain.User>(entity => entity.HasData(new
         {
             Id = 1L,
             Name = "Administrator",
@@ -14,7 +16,7 @@ public static class ContextSeed
             Status = Status.Active
         }));
 
-        builder.Entity<Auth>(entity => entity.HasData(new
+        builder.Entity<Domain.Auth>(entity => entity.HasData(new
         {
             Id = 1L,
             Login = "admin",

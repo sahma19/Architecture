@@ -1,4 +1,7 @@
-namespace Architecture.Application;
+using System.Threading.Tasks;
+using Architecture.Database.Example;
+
+namespace Architecture.Application.Example.Get;
 
 public sealed record GetExampleHandler(IExampleRepository exampleRepository) : IHandler<GetExampleRequest, ExampleModel>
 {
@@ -6,6 +9,6 @@ public sealed record GetExampleHandler(IExampleRepository exampleRepository) : I
     {
         var model = await exampleRepository.GetModelAsync(request.Id);
 
-        return new Result<ExampleModel>(model is null ? NotFound : OK, model);
+        return new Result<ExampleModel>(model is null ? NotFound : OK, (ExampleModel)model);
     }
 }

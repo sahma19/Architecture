@@ -1,4 +1,4 @@
-namespace Architecture.Database;
+namespace Architecture.Database.Context;
 
 public sealed class Context(DbContextOptions options) : DbContext(options)
 {

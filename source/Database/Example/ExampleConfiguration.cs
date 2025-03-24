@@ -1,10 +1,10 @@
-namespace Architecture.Database;
+namespace Architecture.Database.Example;
 
-public sealed class ExampleConfiguration : IEntityTypeConfiguration<Example>
+public sealed class ExampleConfiguration : IEntityTypeConfiguration<Domain.Example>
 {
-    public void Configure(EntityTypeBuilder<Example> builder)
+    public void Configure(EntityTypeBuilder<Domain.Example> builder)
     {
-        builder.ToTable(nameof(Example), nameof(Example));
+        builder.ToTable(nameof(Domain.Example), nameof(Domain.Example));
 
         builder.HasKey(entity => entity.Id);
 

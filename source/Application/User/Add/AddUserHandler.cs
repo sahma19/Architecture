@@ -1,4 +1,8 @@
-namespace Architecture.Application;
+using System.Threading.Tasks;
+using Architecture.Database.Auth;
+using Architecture.Database.User;
+
+namespace Architecture.Application.User.Add;
 
 public sealed record AddUserHandler
 (
@@ -11,9 +15,9 @@ public sealed record AddUserHandler
 {
     public async Task<Result<long>> HandleAsync(AddUserRequest request)
     {
-        var user = new User(request.Name, request.Email);
+        var user = new Domain.User(request.Name, request.Email);
 
-        var auth = new Auth(request.Login, request.Password, user);
+        var auth = new Domain.Auth(request.Login, request.Password, user);
 
         var password = hashService.Create(auth.Password, auth.Salt.ToString());
 

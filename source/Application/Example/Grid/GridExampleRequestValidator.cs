@@ -1,4 +1,4 @@
-namespace Architecture.Application;
+namespace Architecture.Application.Example.Grid;
 
 public sealed class GridExampleRequestValidator : AbstractValidator<GridExampleRequest>
 {

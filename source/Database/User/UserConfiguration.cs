@@ -1,10 +1,10 @@
-namespace Architecture.Database;
+namespace Architecture.Database.User;
 
-public sealed class UserConfiguration : IEntityTypeConfiguration<User>
+public sealed class UserConfiguration : IEntityTypeConfiguration<Domain.User>
 {
-    public void Configure(EntityTypeBuilder<User> builder)
+    public void Configure(EntityTypeBuilder<Domain.User> builder)
     {
-        builder.ToTable(nameof(User), nameof(User));
+        builder.ToTable(nameof(Domain.User), nameof(Domain.User));
 
         builder.HasKey(entity => entity.Id);
 

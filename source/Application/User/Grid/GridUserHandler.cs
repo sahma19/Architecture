@@ -1,4 +1,7 @@
-namespace Architecture.Application;
+using System.Threading.Tasks;
+using Architecture.Database.User;
+
+namespace Architecture.Application.User.Grid;
 
 public sealed record GridUserHandler(IUserRepository userRepository) : IHandler<GridUserRequest, Grid<UserModel>>
 {
@@ -6,6 +9,6 @@ public sealed record GridUserHandler(IUserRepository userRepository) : IHandler<
     {
         var grid = await userRepository.GridAsync(request);
 
-        return new Result<Grid<UserModel>>(grid is null ? NotFound : OK, grid);
+        return new Result<Grid<UserModel>>(grid is null ? NotFound : OK, (Grid<UserModel>)grid);
     }
 }

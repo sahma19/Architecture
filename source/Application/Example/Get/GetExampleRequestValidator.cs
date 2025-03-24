@@ -1,4 +1,4 @@
-namespace Architecture.Application;
+namespace Architecture.Application.Example.Get;
 
 public sealed class GetExampleRequestValidator : AbstractValidator<GetExampleRequest>
 {

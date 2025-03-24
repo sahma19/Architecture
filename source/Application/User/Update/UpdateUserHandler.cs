@@ -1,4 +1,7 @@
-namespace Architecture.Application;
+using System.Threading.Tasks;
+using Architecture.Database.User;
+
+namespace Architecture.Application.User.Update;
 
 public sealed record UpdateUserHandler
 (

@@ -1,3 +1,5 @@
+using System;
+
 namespace Architecture.Domain;
 
 public sealed class Auth : Entity

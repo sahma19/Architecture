@@ -1,4 +1,7 @@
-namespace Architecture.Application;
+using System.Threading.Tasks;
+using Architecture.Database.Example;
+
+namespace Architecture.Application.Example.Delete;
 
 public sealed record DeleteExampleHandler
 (

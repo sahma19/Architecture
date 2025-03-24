@@ -1,4 +1,13 @@
-namespace Architecture.Web;
+using System.Collections.Generic;
+using Architecture.Application.User.Add;
+using Architecture.Application.User.Delete;
+using Architecture.Application.User.Get;
+using Architecture.Application.User.Grid;
+using Architecture.Application.User.Inactivate;
+using Architecture.Application.User.List;
+using Architecture.Application.User.Update;
+
+namespace Architecture.Web.Controllers;
 
 [ApiController]
 [Route("api/users")]

@@ -1,4 +1,8 @@
-namespace Architecture.Application;
+using System.Threading.Tasks;
+using Architecture.Database.Auth;
+using Architecture.Database.User;
+
+namespace Architecture.Application.User.Delete;
 
 public sealed record DeleteUserHandler
 (
