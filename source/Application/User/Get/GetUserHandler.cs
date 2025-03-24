@@ -1,4 +1,7 @@
-namespace Architecture.Application;
+using System.Threading.Tasks;
+using Architecture.Database.User;
+
+namespace Architecture.Application.User.Get;
 
 public sealed record GetUserHandler(IUserRepository userRepository) : IHandler<GetUserRequest, UserModel>
 {
@@ -6,6 +9,6 @@ public sealed record GetUserHandler(IUserRepository userRepository) : IHandler<G
     {
         var user = await userRepository.GetModelAsync(request.Id);
 
-        return new Result<UserModel>(user is null ? NotFound : OK, user);
+        return new Result<UserModel>(user is null ? NotFound : OK, (UserModel)user);
     }
 }

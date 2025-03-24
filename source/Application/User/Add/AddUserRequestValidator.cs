@@ -1,4 +1,4 @@
-namespace Architecture.Application;
+namespace Architecture.Application.User.Add;
 
 public sealed class AddUserRequestValidator : AbstractValidator<AddUserRequest>
 {

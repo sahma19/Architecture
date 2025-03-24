@@ -1,4 +1,4 @@
-namespace Architecture.Database;
+namespace Architecture.Database.Context;
 
 public sealed class ContextFactory : IDesignTimeDbContextFactory<Context>
 {

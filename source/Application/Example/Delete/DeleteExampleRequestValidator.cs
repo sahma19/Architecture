@@ -1,4 +1,4 @@
-namespace Architecture.Application;
+namespace Architecture.Application.Example.Delete;
 
 public sealed class DeleteExampleRequestValidator : AbstractValidator<DeleteExampleRequest>
 {

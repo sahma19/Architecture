@@ -1,4 +1,7 @@
-namespace Architecture.Application;
+using System.Threading.Tasks;
+using Architecture.Database.User;
+
+namespace Architecture.Application.User.Inactivate;
 
 public sealed record InactivateUserHandler
 (
@@ -9,7 +12,7 @@ public sealed record InactivateUserHandler
 {
     public async Task<Result> HandleAsync(InactivateUserRequest request)
     {
-        var user = new User(request.Id);
+        var user = new Domain.User(request.Id);
 
         user.Inactivate();
 

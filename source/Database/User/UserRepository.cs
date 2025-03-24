@@ -1,8 +1,13 @@
-namespace Architecture.Database;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-public sealed class UserRepository(Context context) : EFRepository<User>(context), IUserRepository
+namespace Architecture.Database.User;
+
+public sealed class UserRepository(Context.Context context) : EFRepository<Domain.User>(context), IUserRepository
 {
-    public static Expression<Func<User, UserModel>> Model => entity => new UserModel
+    public static Expression<Func<Domain.User, UserModel>> Model => entity => new UserModel
     {
         Id = entity.Id,
         Name = entity.Name,

@@ -1,3 +1,5 @@
-namespace Architecture.Application;
+using System.Collections.Generic;
 
-public sealed record AddFileRequest(IEnumerable<BinaryFile> Files);
+namespace Architecture.Application.File.Add;
+
+public sealed record AddFileRequest(IList<BinaryFile> Files);

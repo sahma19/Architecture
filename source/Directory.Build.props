@@ -1,6 +1,6 @@
 <Project>
     <PropertyGroup>
-        <ImplicitUsings>enable</ImplicitUsings>
+        <ImplicitUsings>disable</ImplicitUsings>
         <IsPackable>false</IsPackable>
         <LangVersion>latest</LangVersion>
         <NeutralLanguage>en</NeutralLanguage>

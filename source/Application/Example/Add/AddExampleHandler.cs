@@ -1,4 +1,7 @@
-namespace Architecture.Application;
+using System.Threading.Tasks;
+using Architecture.Database.Example;
+
+namespace Architecture.Application.Example.Add;
 
 public sealed record AddExampleHandler
 (
@@ -9,7 +12,7 @@ public sealed record AddExampleHandler
 {
     public async Task<Result<long>> HandleAsync(AddExampleRequest request)
     {
-        var entity = new Example(request.Name);
+        var entity = new Domain.Example(request.Name);
 
         await exampleRepository.AddAsync(entity);
 

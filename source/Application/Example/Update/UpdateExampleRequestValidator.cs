@@ -1,4 +1,4 @@
-namespace Architecture.Application;
+namespace Architecture.Application.Example.Update;
 
 public sealed class UpdateExampleRequestValidator : AbstractValidator<UpdateExampleRequest>
 {

@@ -1,3 +1,7 @@
+using Architecture.Database.Context;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder();
 
 builder.Host.UseSerilog();

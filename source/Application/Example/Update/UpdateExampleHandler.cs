@@ -1,4 +1,7 @@
-namespace Architecture.Application;
+using System.Threading.Tasks;
+using Architecture.Database.Example;
+
+namespace Architecture.Application.Example.Update;
 
 public sealed record UpdateExampleHandler
 (
@@ -9,7 +12,7 @@ public sealed record UpdateExampleHandler
 {
     public async Task<Result> HandleAsync(UpdateExampleRequest request)
     {
-        var entity = new Example(request.Id, request.Name);
+        var entity = new Domain.Example(request.Id, request.Name);
 
         await exampleRepository.UpdateAsync(entity);
 

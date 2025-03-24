@@ -1,4 +1,10 @@
-namespace Architecture.Application;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Architecture.Database.Auth;
+
+namespace Architecture.Application.Auth;
 
 public sealed record AuthHandler
 (
@@ -24,7 +30,7 @@ public sealed record AuthHandler
         return new Result<AuthResponse>(OK, response);
     }
 
-    private string Token(Auth auth)
+    private string Token(Domain.Auth auth)
     {
         var claims = new List<Claim> { new("sub", auth.Id.ToString()) };
 

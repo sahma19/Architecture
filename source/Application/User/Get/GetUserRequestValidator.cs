@@ -1,4 +1,4 @@
-namespace Architecture.Application;
+namespace Architecture.Application.User.Get;
 
 public sealed class GetUserRequestValidator : AbstractValidator<GetUserRequest>
 {

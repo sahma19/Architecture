@@ -1,4 +1,4 @@
-namespace Architecture.Application;
+namespace Architecture.Application.File.Get;
 
 public sealed class GetFileRequestValidator : AbstractValidator<GetFileRequest>
 {

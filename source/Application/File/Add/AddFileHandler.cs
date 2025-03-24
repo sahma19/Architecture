@@ -1,4 +1,7 @@
-namespace Architecture.Application;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace Architecture.Application.File.Add;
 
 public sealed record AddFileHandler : IHandler<AddFileRequest, IEnumerable<BinaryFile>>
 {

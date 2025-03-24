@@ -1,4 +1,8 @@
-namespace Architecture.Application;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Architecture.Database.User;
+
+namespace Architecture.Application.User.List;
 
 public sealed record ListUserHandler(IUserRepository userRepository) : IHandler<ListUserRequest, IEnumerable<UserModel>>
 {
@@ -6,6 +10,6 @@ public sealed record ListUserHandler(IUserRepository userRepository) : IHandler<
     {
         var users = await userRepository.ListModelAsync();
 
-        return new Result<IEnumerable<UserModel>>(users is null ? NotFound : OK, users);
+        return new Result<IEnumerable<UserModel>>(users is null ? NotFound : OK, (IEnumerable<UserModel>)users);
     }
 }

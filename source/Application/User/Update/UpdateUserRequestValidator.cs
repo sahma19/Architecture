@@ -1,4 +1,4 @@
-namespace Architecture.Application;
+namespace Architecture.Application.User.Update;
 
 public sealed class UpdateUserRequestValidator : AbstractValidator<UpdateUserRequest>
 {

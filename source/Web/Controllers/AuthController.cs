@@ -1,4 +1,6 @@
-namespace Architecture.Web;
+using Architecture.Application.Auth;
+
+namespace Architecture.Web.Controllers;
 
 [ApiController]
 [Route("api/auths")]

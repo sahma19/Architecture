@@ -1,4 +1,4 @@
-namespace Architecture.Application;
+namespace Architecture.Application.Example.Add;
 
 public sealed class AddExampleRequestValidator : AbstractValidator<AddExampleRequest>
 {

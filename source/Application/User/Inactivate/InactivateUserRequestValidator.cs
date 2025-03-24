@@ -1,4 +1,4 @@
-namespace Architecture.Application;
+namespace Architecture.Application.User.Inactivate;
 
 public sealed class InactivateUserRequestValidator : AbstractValidator<InactivateUserRequest>
 {

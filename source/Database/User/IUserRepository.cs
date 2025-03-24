@@ -1,6 +1,9 @@
-namespace Architecture.Database;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-public interface IUserRepository : IRepository<User>
+namespace Architecture.Database.User;
+
+public interface IUserRepository : IRepository<Domain.User>
 {
     Task<UserModel> GetModelAsync(long id);
 

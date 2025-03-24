@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace Architecture.Application;
 
 public static class Validators

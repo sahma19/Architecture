@@ -1,8 +1,10 @@
-namespace Architecture.Database;
+using System.Threading.Tasks;
 
-public sealed class AuthRepository(Context context) : EFRepository<Auth>(context), IAuthRepository
+namespace Architecture.Database.Auth;
+
+public sealed class AuthRepository(Context.Context context) : EFRepository<Domain.Auth>(context), IAuthRepository
 {
     public Task DeleteByUserIdAsync(long userId) => DeleteAsync(entity => entity.User.Id == userId);
 
-    public Task<Auth> GetByLoginAsync(string login) => Queryable.SingleOrDefaultAsync(entity => entity.Login == login);
+    public Task<Domain.Auth> GetByLoginAsync(string login) => Queryable.SingleOrDefaultAsync(entity => entity.Login == login);
 }
